@@ -1,0 +1,31 @@
+@charset "utf-8";
+p{
+    color:orange;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-indent: 50px;
+}
+h1{
+    color:grey;
+}
+#p1{
+    background-color: yellow;
+  color: red;
+}
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: blue;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
