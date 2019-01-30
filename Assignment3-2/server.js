@@ -13,11 +13,7 @@ function rand(low, high) {
     high = Math.floor(high);
     return Math.floor(Math.random() * (high - low)) + low;
 }
-/*function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  }*/
+
 function rand2() {
     var a = Math.round(Math.random()*2 + 1)
     var ret = ''
