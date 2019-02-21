@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {{# each item}}
+    <h2>Update employee {{this.firstName}} {{this.lastName}}</h2>
+    <br>ID: {{this.id}}
+    <br><br>
+    <form action="/updateitem" method="POST">
+        First Name: <input type="text" name="firstName" value={{{this.firstName}}}><br>
+        Last Name: <input type="text" name="lastName" value={{this.lastName}}><br>
+        Department: <select name="department" id="department">
+            <option name={{this.department}} value={{this.department}}>{{this.department}}</option>
+            <option name="Team Member" value="Team Member">Team Member</option>
+            <option name="Supervisor"value="Supervisor">Supervisor</option>
+            <option name="Manager" value="Manager">Manager</option>
+            </optgroup>
+        </select><br>
+        Start Date: <input type="date" name="startDate" value={{this.sartDate}}><br>
+        Job Title: <input type="text" name="jobTitle" value={{this.jobTitle}}><br>
+        Salary: <input type="number" name="salary" value={{this.salary}}><br><br>
+        {{/each}}
+        <input type="submit" value="submit">
+
+    </form>
+    <br><a href="index"><button>Return</button></a>
+</body>
+</html>

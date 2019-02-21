@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+</head>
+<body>
+    
+    <table border=1px>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Department</th>
+        <th>Job Title</th>
+        <th>Start Date</th>
+        <th>Salary</th>
+        <th>Update</th>
+        <th>Delete</th>
+        {{# each items}}
+        
+        <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.department}}</td>
+            <td>{{this.jobTitle}}</td>
+            <td>{{this.sartDate}}</td>
+            <td>{{this.salary}}</td>
+            <td><form action="/update" method="POST">
+                <input type="text" name="id" value={{this._id}}>
+                <input type="submit" value="Edit"></form>
+            <!--<td><a href='/update?id=' + {{this._id}} + "">Update Record</a></td>-->
+            <td><a href='/delete?id=' + {{this._id}}>Delete Record</a></td>
+        </tr>
+        {{/each}}
+    </table>
+<br><br>
+<button><a href="index.hbs">return</a></button>
+</body>
+</html>
