@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Employee</title>
+</head>
+<body>
+    <h2>Add a new employee...</h2>
+    <form action="/results" method="POST">
+        First Name: <input type="text" name="firstName"><br>
+        Last Name: <input type="text" name="lastName"><br>
+        Department: <select name="department" id="department">
+            <optgroup label="Select Department">
+            <option name="Team Member" value="Team Member">Team Member</option>
+            <option name="Supervisor"value="Supervisor">Supervisor</option>
+            <option name="Manager" value="Manager">Manager</option>
+            </optgroup>
+        </select><br>
+        Start Date: <input type="date" name="startDate" id="startDate"><br>
+        Job Title: <input type="text" name="jobTitle"><br>
+        Salary: <input type="number" name="salary"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <br><a href="index"><button>Return</button></a>
+</body>
+</html>
